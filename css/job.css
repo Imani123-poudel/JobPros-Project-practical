@@ -1,16 +1,18 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 
 :root{
-    --main-color:#893a9c;
+    --main-color:#6b40b6;
     --red: red;
-    --higlight:rgb(96, 5, 114);
+    --higlight:#ded8df;
     --light-color:#746b6b;
     --light-bg:#eee;
     --black:#2c4869;
     --white:#fff;
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
     --border:.1rem solid rgba(0,0,0,.2);
-    --color: rgb(36, 31, 31);
+    --color: rgb(0, 0, 0);
+    --hover-color:#5720b7;
+    
 }
 
 
@@ -40,7 +42,7 @@
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 55%;
     overflow-x: hidden;
     scroll-padding-top: 7rem;
     scroll-behavior: smooth;
@@ -64,9 +66,9 @@ section{
     padding: 1rem 0;
 }
 .section-title{
-    border-top: .5rem solid var(--main-color);
-    border-bottom: .5rem solid var(--main-color);
-    background-color: var(--black);
+    border-top: .2rem solid var(--main-color);
+    border-bottom: .2rem solid var(--main-color);
+    background-color: var(--higlight);
     color: var(--white);
     text-align: center;
     padding: 1.5rem 1rem;
@@ -77,19 +79,40 @@ section{
 .btn{
     display: inline-block;
     margin-top: 1rem;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--white);
     background-color: var(--main-color);
-    border-radius: .5rem;
+    border-radius: 1.5rem;
     text-align: center;
+    font-weight: 300;
 }
 
 .btn:hover{
-    background-color: var(--black);
+    background-color: var(--hover-color);
+}
+.w-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--main-color);
+    background-color: var(--white);
+    border: var(--main-color);
+    border-color: var(--main-color);
+    border-radius: 1.5rem;
+    text-align: center;
+    font-weight: 300;
+
 }
 
+.w-btn:hover{
+    background-color: var(--main-color);
+    color: var(--white);
+}
 .flex-btn{
     display: flex;
     align-items: center;
@@ -102,9 +125,9 @@ section{
 .header{
     position: sticky;
     top: 0;  left: 0;  right: 0;
-    background-color: var(--white);
+    background-color: var(--higlight);
     box-shadow: var(--box-shadow);
-    z-index: 1000;
+    z-index: 1000;;
 }
 
 .header .flex{
@@ -121,23 +144,20 @@ section{
     display: none;
 }
 
-.header .flex .logo{
-    font-size: 2.2rem;
-    color: var(--black); 
-}
 
-.header .flex .logo i{
+.header .flex .logo img{
+    width: 75px;
+    height: 50px;
     margin-right: .5rem;
-    color: var(--light-color); 
 }
 
 .header .flex .navbar a{
     display: inline-block;
-    padding: 2.5rem;
-    font-size: 1.5rem;
-    color: var(--light-color);
-    border-radius: .5rem;
-    
+    color: var(--main-color);
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
 }
 
 .header .flex .navbar a:hover{
@@ -170,14 +190,14 @@ section{
 
 .home-container .home form h3{
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--main-color);
     margin-bottom: 1rem;
 }
 
 .home-container .home form p{
     text-align: left;
     font-size: 1.6rem;
-    color: var(--light-color);
+    color: var(--color);
     padding-top: 1rem;
 
 }
@@ -196,9 +216,13 @@ section{
     color: var(--black);
 }
 
+.category .heading{
+    color: var(--hover-color);
+}
+
 .category .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 25rem);
+    grid-template-columns: repeat(auto-fit, 30rem);
     justify-content: center;
     align-items: flex-start;
     gap: 1.5rem;
@@ -220,7 +244,7 @@ section{
     width: 5rem;
     line-height: 4.5rem;
     font-size: 1.8rem;
-    color: var(--black);
+    color: var(--hover-color);
     border-radius: .5rem;
     background-color: var(--light-bg);
     text-align: center;
@@ -228,18 +252,18 @@ section{
 
 .category .box-container .box h3{
     font-size: 1.3rem;
-    color: var(--black);
+    color: var(--main-color);
     padding-bottom: .6rem;
 }
 
 .category .box-container .box span{
-    color: var(--light-color);
+    color: var(--color);
     font-size: 1.2rem;
 
 }
 
 .category .box-container .box:hover{
-    background-color: var(--black);
+    background-color: var(--hover-color);
 
 }
 
@@ -253,6 +277,10 @@ section{
 
 .category .box-container .box:hover i{
     background-color: var(--white);
+}
+
+.jobs-container .heading{
+    color: var(--hover-color);
 }
 
 .jobs-container .box-container{
@@ -280,8 +308,8 @@ section{
 }
 
 .jobs-container .box-container .box .company img{
-    height: 7rem;
-    width: 7rem;
+    height: 8rem;
+    width: 8rem;
     object-fit: contain;
 }
 
@@ -309,34 +337,34 @@ section{
 .jobs-container .box-container .box .location{
     padding: .2rem;
     font-size: 1.3rem;
-    color: var(--light-color);
+    color: var(--color);
 }
 
 .jobs-container .box-container .box .location span{
     margin-right: .3rem;
-    color: var(--higlight);
+    color: var(--black);
 }
 
 .jobs-container .box-container .box .Salary{
     padding: .2rem;
     font-size: 1.3rem;
-    color: var(--light-color);
+    color: var(--color);
 }
 .jobs-container .box-container .box .Salary span{
     margin-right: .3rem;
-    color: var(--higlight);
+    color: var(--black);
 }
 
 
 .jobs-container .box-container .box .level{
     padding: .2rem;
     font-size: 1.3rem;
-    color: var(--light-color);
+    color: var(--color);
 }
 
 .jobs-container .box-container .box .level span{
     margin-right: .3rem;
-    color: var(--higlight);
+    color: var(--black);
 }
 
 
@@ -372,12 +400,12 @@ section{
 }
 
 .jobs-container .box-container .box .fa-heart:hover{
-    background-color:var(--black);
+    background-color:var(--higlight);
     color: var(--white);
 }
 .about img{
     width: 100%;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 
 }
 
@@ -391,15 +419,19 @@ section{
 
 .about .box h3{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--main-color);
     margin-bottom: 1rem;
 }
 
 .about .box p{
     padding: 1rem 0;
     line-height: 1.8;
-    color: var(--light-color);
+    color: var(--color);
     font-size: 1.6rem;
+}
+
+.service-container .heading{
+    color: var(--main-color);
 }
 
 
@@ -436,7 +468,7 @@ section{
 
 .service-container .box-container .box .title{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--color);
     padding-left: 7rem;
     display: flex;
     padding-top: 2rem;
@@ -444,8 +476,13 @@ section{
 
 .service-container .box-container .box .decription{
     font-size: 1.5rem;
-    color: var(--higlight);
+    color: var(--black);
     padding-top: 3rem;
+}
+
+.section-title{
+    color: var(--main-color);
+    font-weight: 550;
 }
 
 .reviews .box-container{
@@ -476,7 +513,7 @@ section{
 
 .reviews .box-container .box .title{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--hover-color);
     text-align: right;
     margin-bottom: .5rem;
 }
@@ -503,7 +540,7 @@ section{
 }
 .reviews .box-container .box .user h3{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--color);
     margin-bottom: .5rem;
 }
 
@@ -513,6 +550,10 @@ section{
 }
 .reviews .box-container .box:hover{
     cursor: pointer;
+}
+
+.job-filter .heading{
+    color: var(--main-color);
 }
 
 .job-filter form{
@@ -536,7 +577,8 @@ section{
 
 .job-filter form .flex .box p{
     font-size: 1.6rem;
-    color: var(--light-color);
+    color: var(--color);
+    
 }
 
 .job-filter form .flex .box p span{
@@ -613,7 +655,9 @@ section{
     transform: scaleY(1);
     transition: .2s linear;
 }
-
+.job-details .heading{
+    color: var(--main-color);
+}
 .job-details .details{
     background-color: var(--white);
     box-shadow: var(--box-shadow);
@@ -656,7 +700,7 @@ section{
 
 .job-details .details .moreinfo h3{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--hover-color);
     padding: 1rem 0;
 }
 
@@ -679,7 +723,7 @@ section{
 }
 .job-details .details .basic-details h1{
     font-size: 1.5rem;
-    color: var(--black);
+    color: var(--color);
 }
 
 .job-details .details .basic-details p{
@@ -696,6 +740,10 @@ section{
 .job-details .details ul h3{
     font-size: 2rem;
 }
+.job-details .details ul h2{
+    font-size: 1.7rem;
+    padding-top: 2rem;
+}
 
 .job-details .details ul li{
     padding: 1rem 0;
@@ -704,35 +752,6 @@ section{
     margin-right: 1.5rem;
 }
 
-.job-details .details .description{
-    margin-top: 1.5rem;
-}
-
-.job-details .details .description h3{
-    font-size: 2rem;
-    color: var(--black);
-    line-height: 1.8;
-    padding: 1rem 0;
-}
-
-.job-details .details .description h2{
-    color: var(--color);
-    font-size: 1.5rem;
-
-}
-
-
-.job-details .details .description ul{
-    margin: 2rem ;
-    font-size: .5rem;
-}
-
-.job-details .details .decription ul li{
-    padding: 1rem 0;
-    font-size: 1.6rem;
-    color: var(--light-color);
-    margin-right: 1.5rem;
-}
 
 .job-details .details .save{
     background-color: var(--light-bg);
@@ -744,7 +763,7 @@ section{
 
 }
 .job-details .details .save:hover{
-    background-color: var(--black);
+    background-color: var(--higlight);
 }
 
 .job-details .details .save i{
@@ -787,7 +806,7 @@ section{
     line-height: 4.5rem;
     font-size: 2rem;
     color: var(--white);
-    background-color: var(--black);
+    background-color: var(--main-color);
     border-radius: .5rem;
     margin-bottom: 2rem;
 }
@@ -796,7 +815,7 @@ section{
     display: block;
     padding-top: .5rem;
     font-size: 1.6rem;
-    color: var(--light-color);
+    color: var(--color);
     line-height: 1.5;
 }
 
@@ -812,7 +831,7 @@ section{
 
 .contact  form h3{
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--main-color);
     margin-bottom: 1rem;
 }
 
@@ -842,7 +861,7 @@ section{
     text-align: left;
     font-size: 1.6rem;
     padding-top: 1rem;
-    color: var(--light-color);
+    color: var(--color);
 }
 .contact  form p span{
     color: var(--red);
@@ -878,7 +897,7 @@ section{
 
 .account-form-container .account-form form h3{
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--main-color);
     margin-bottom: 1rem;
 }
 
@@ -936,7 +955,9 @@ section{
 
 
 
-
+.footer{
+    background-color: var(--higlight);
+}
 
 
 
@@ -951,7 +972,7 @@ section{
 
 .footer .grid .box h3{
     font-size: 2rem;
-    color: var(--black);
+    color: var(--main-color);
     margin: 1rem 0;
 }
 
@@ -959,7 +980,7 @@ section{
     display: block;
     padding: 1rem 0;
     font-size: 1.6rem;
-    color: var(--light-color);
+    color: var(--color);
 }
 
 .footer .grid .box a i{
